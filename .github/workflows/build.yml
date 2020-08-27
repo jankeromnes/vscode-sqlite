@@ -34,6 +34,8 @@ jobs:
         npm run test-html
     - name: Package
       run: npm run package
+    - name: Publish to OpenVSX
+      run: npx ovsx publish
     - name: Set version
       run: echo ::set-env name=VERSION::$(node -p -e "require('./package.json').version")
     - name: Upload artifact
