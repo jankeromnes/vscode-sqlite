@@ -41,3 +41,5 @@ jobs:
       with:
         name: vscode-sqlite-${{ env.VERSION }}
         path: vscode-sqlite-${{ env.VERSION }}.vsix
+    - name: Publish to OpenVSX
+      run: npx ovsx publish vscode-sqlite-${{ env.VERSION }}.vsix
